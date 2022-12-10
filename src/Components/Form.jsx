@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
-// import "../index.css"
 import { TextField, Grid, Button } from "@mui/material"
 import { useFormik } from "formik"
 import * as Yup from "yup"
-import { ContextGlobal } from "../Components/utils/global.context";
+import { ContextGlobal } from './utils/global.context'
 
 
 const Form = () => {
@@ -23,6 +22,7 @@ const Form = () => {
     }),
     onSubmit: (data) =>{
       console.log(data);
+      document.querySelector('.submit').innerHTML=`<h3> Gracias, ${data.nombre} nos contactaremos cuanto antes via email </h3>`
     }
   })
 
@@ -51,7 +51,7 @@ const Form = () => {
             }}
             value={values.nombre}
             error={errors.nombre}
-            helperText={errors.email}
+            helperText={errors.nombre}
             />
           </Grid>
           <Grid item xs={12} sm={10} md={7}>
@@ -66,7 +66,7 @@ const Form = () => {
             }}
             value={values.apellido}
             error={errors.apellido}
-            helperText={errors.email}
+            helperText={errors.apellido}
             />
           </Grid>
           <Grid item xs={12} sm={10} md={7} >
@@ -87,6 +87,9 @@ const Form = () => {
         </Grid>
         <Button color="error" type="submit" variant="contained" style={{width:"200px", margin:"40px"}}>Enviar</Button>
       </form>
+      <div className= 'submit'>
+
+      </div>
     </div>
   );
 };

@@ -4,11 +4,18 @@ import Detail from '../Routes/Detail'
 import axios from 'axios'
 
 
+
+
+
 beforeEach(() =>{
-    render(<Detail/>)
+    //eslint-disable-next-line
+    render(
+    <Detail/>
+    )
 })
 
 describe('Detail', () => {
+    
     test('Verificacion campos en Detail', () => {
         const Nombre = screen.getByText("Name")
         const Email = screen.getByText("Email")
@@ -20,9 +27,10 @@ describe('Detail', () => {
         expect(Website).toBeInTheDocument();
     })
 
-    const fetchData = () => axios.get('https://jsonplaceholder.typicode.com/users/9%27);
 
-    test("Testing fetch detail", () => {
+    const fetchData = () => axios.get('https://jsonplaceholder.typicode.com/users/9%27'); 
+
+    test("Testing fetch detail", async () => {
 
         return fetchData().then(data => { 
             expect(data.data.id).toBe(9);
@@ -31,3 +39,5 @@ describe('Detail', () => {
         })
     })
 })
+
+

@@ -8,7 +8,7 @@ import { ContextGlobal } from "../Components/utils/global.context";
 const Card = ({ odontologo, setFavsPageItems }) => {
   const { state, dispatch} = useContext(ContextGlobal)
 
-  const updateFavs = (favs) => {
+  const actualizarFavs = (favs) => {
     if (setFavsPageItems) {
       setFavsPageItems(favs);
     }
@@ -28,7 +28,7 @@ const Card = ({ odontologo, setFavsPageItems }) => {
       alert("Se eliminó de favoritos")
     }
 
-    updateFavs(newFavs);
+    actualizarFavs(newFavs);
   };
 
   return (
