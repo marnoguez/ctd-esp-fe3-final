@@ -5,14 +5,11 @@ import axios from 'axios'
 
 
 
-
-
 beforeEach(() =>{
     //eslint-disable-next-line
-    render(
-    <Detail/>
-    )
+    render(<Detail/>)
 })
+
 
 describe('Detail', () => {
     
@@ -28,9 +25,9 @@ describe('Detail', () => {
     })
 
 
-    const fetchData = () => axios.get('https://jsonplaceholder.typicode.com/users/9%27'); 
+    const fetchData = () => axios.get('https://jsonplaceholder.typicode.com/users/9'); 
 
-    test("Testing fetch detail", async () => {
+    test("Testing fetch detail", () => {
 
         return fetchData().then(data => { 
             expect(data.data.id).toBe(9);
@@ -39,5 +36,6 @@ describe('Detail', () => {
         })
     })
 })
+
 
 
