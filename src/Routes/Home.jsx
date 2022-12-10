@@ -25,9 +25,7 @@ const Home = () => {
 
   return (
     <main>
-      <h1 style= {{fontSize: '1.5rem',
-  textAlign: 'center',
-  padding: '0.4rem',}}>Home</h1>
+      <h1>Home</h1>
       <div className={styles.cardgrid} style={{backgroundColor: state.bgColor, color: state.ftColor, 
   
   }}>
