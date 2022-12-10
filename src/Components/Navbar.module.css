@@ -1,0 +1,44 @@
+
+
+.navbar_wrapper {
+  width: 100%;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  justify-content: space-between;
+}
+
+.navbar h1 span {
+  color: #ff0000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.navbar ul a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 0.9rem;
+}
+
+.navbar button {
+  /* background-color: #000000;
+  border: none; */
+  padding: 0.2rem 0.2rem;
+  border-radius: 0.5rem;
+}
+
+.navbar button:hover{
+  cursor:pointer;
+}
+
+.navbar button span {
+  font-size: 0.7rem;
+}

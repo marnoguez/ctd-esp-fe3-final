@@ -1,0 +1,48 @@
+.card {
+  display: flex;
+  /* position: relative; */
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 0.3rem 0.3rem 0 0.3rem;
+  border: 0.5px solid rgb(136, 136, 136);
+  
+}
+
+.card img {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.card h2 {
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.card h4 {
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.card button {
+  /*width: 100%;*/
+  margin-bottom: 0.3rem;
+  border: none;
+  background-color: rgba(240, 248, 255, 0);
+  
+  /* padding: 0.2rem; */
+}
+
+.card button:hover {
+  filter: invert(1);
+  cursor:pointer;
+}
+
+.card:hover {
+  border: 0.5px solid rgb(206, 217, 142);
+}
+
+

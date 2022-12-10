@@ -1,0 +1,7 @@
+nav{
+    display: flex;
+    width: 80vw;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+
